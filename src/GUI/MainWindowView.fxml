@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="549.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainWindowController">
+   <children>
+      <TextField fx:id="noOfPrgStatesTextField" layoutX="499.0" layoutY="462.0" prefHeight="25.0" prefWidth="28.0" />
+      <TableView fx:id="heapTableTableView" layoutX="729.0" layoutY="332.0" prefHeight="193.0" prefWidth="138.0">
+        <columns>
+          <TableColumn fx:id="heapTableAddr" prefWidth="63.0" text="Address" />
+          <TableColumn fx:id="heapTableVal" prefWidth="120.0" text="Value" />
+        </columns>
+      </TableView>
+      <ListView fx:id="prgStateIdsListView" layoutX="380.0" layoutY="75.0" prefHeight="200.0" prefWidth="138.0" />
+      <ListView fx:id="exeStackListView" layoutX="558.0" layoutY="75.0" prefHeight="200.0" prefWidth="138.0" />
+      <ListView fx:id="fileTableListView" layoutX="200.0" layoutY="75.0" prefHeight="200.0" prefWidth="138.0" />
+      <TableView fx:id="symTableTableView" layoutX="729.0" layoutY="72.0" prefHeight="200.0" prefWidth="138.0">
+        <columns>
+          <TableColumn fx:id="symTableVar" prefWidth="61.0" text="Var Name" />
+          <TableColumn fx:id="symTableVal" prefWidth="123.0" text="Value" />
+        </columns>
+      </TableView>
+      <ListView fx:id="outListView" layoutX="22.0" layoutY="75.0" prefHeight="200.0" prefWidth="138.0" />
+      <Button fx:id="oneStepButton" layoutX="399.0" layoutY="356.0" mnemonicParsing="false" onAction="#oneStepHandler" prefHeight="25.0" prefWidth="100.0" text="One Step" />
+      <Label layoutX="244.0" layoutY="48.0" text="File Table" />
+      <Label layoutX="100.0" layoutY="48.0" prefHeight="17.0" prefWidth="28.0" text="Out" />
+      <Label layoutX="602.0" layoutY="48.0" text="Exe Stack" />
+      <Label layoutX="413.0" layoutY="48.0" prefHeight="17.0" prefWidth="73.0" text="Prg State ids" />
+      <Label layoutX="768.0" layoutY="308.0" prefHeight="17.0" prefWidth="62.0" text="Heap Table" />
+      <Label layoutX="771.0" layoutY="48.0" text="Sym Table" />
+      <Label layoutX="370.0" layoutY="456.0" prefHeight="37.0" prefWidth="120.0" text="No. of program states:" />
+      <TableView fx:id="latchTableView" layoutX="200.0" layoutY="332.0" prefHeight="193.0" prefWidth="138.0">
+        <columns>
+          <TableColumn fx:id="latchTableLocations" prefWidth="78.0" text="Location" />
+          <TableColumn fx:id="latchTableValue" prefWidth="73.0" text="Value" />
+        </columns>
+      </TableView>
+      <Label layoutX="251.0" layoutY="308.0" prefHeight="17.0" prefWidth="36.0" text="Latch" />
+      <TableView fx:id="barrierTableView" layoutX="22.0" layoutY="332.0" prefHeight="193.0" prefWidth="138.0">
+        <columns>
+          <TableColumn fx:id="barrierTableIndexes" prefWidth="32.0" text="Idx" />
+          <TableColumn fx:id="barrierTableValues" prefWidth="40.0" text="Val" />
+            <TableColumn fx:id="barrierTableList" prefWidth="48.199951171875" text="List" />
+        </columns>
+      </TableView>
+      <Label layoutX="73.0" layoutY="308.0" prefHeight="17.0" prefWidth="36.0" text="Barrier" />
+      <Label layoutX="610.0" layoutY="308.0" text="Semaphore" />
+      <TableView fx:id="semaphoreTableView" layoutX="572.0" layoutY="332.0" prefHeight="193.0" prefWidth="138.0">
+        <columns>
+          <TableColumn fx:id="semaphoreTableIndexes" prefWidth="75.0" text="Idx" />
+          <TableColumn fx:id="semaphoreTableTuples" prefWidth="75.0" text="Tuples" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
